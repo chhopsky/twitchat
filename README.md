@@ -1,4 +1,4 @@
-# twitchat is the basics of a Twitch bot in .NET C#
+# twitchat is the basics of a Twitch bot in .NET Csharp
 
 Why, you ask?  Well, so it can run natively on Windows and be tampered with and customized by users.  Twitch chat is NOT IRC - the interface that TMI provides is "irc-like" and does not strictly conform to the RFCs.  This is fine and a lot of clients will work around it but none of the existing .NET C# IRC libraries will.
 
