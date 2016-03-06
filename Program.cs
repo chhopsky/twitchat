@@ -20,7 +20,8 @@ namespace chatrig
 
             Int32 port = 6667;
             TcpClient client = new TcpClient("irc.twitch.tv", port);
-            string channel = "#awesomejoey";
+            // Enter in channel (the username of the stream chat you wish to connect to) without the #
+            string channel = "awesomejoey";
 
             // Get a client stream for reading and writing.
             //  Stream stream = client.GetStream();
@@ -49,7 +50,7 @@ namespace chatrig
 
             // send message to join channel
 
-            string joinstring = "JOIN " + channel + "\r\n";
+            string joinstring = "JOIN " + "#" + channel + "\r\n";
             Byte[] join = System.Text.Encoding.ASCII.GetBytes(joinstring);
             stream.Write(join, 0, join.Length);
             Console.WriteLine("Sent channel join.\r\n");
